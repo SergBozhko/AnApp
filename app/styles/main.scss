@@ -71,11 +71,16 @@ $titleSizeBig: 66px;
 $blockBgColor: #e8e8e8;
 $mainSize: 16px;
 $blockTSize: 18px;
+$inputColor: rgba(159, 215, 255, 0.6);
+$inputColorActive: rgb(159, 215, 255);
 
 @mixin trText {
   -webkit-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+@mixin shadow {
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.2);
 }
 
 #main-header {
@@ -148,7 +153,7 @@ $blockTSize: 18px;
   align-items: center;
   text-align: center;
 
-  min-height: 100%;
+  min-height: 700px;
   padding-top: 60px;
   background-image: url(../images/app-dev-bg.jpg);
   background-attachment: fixed;
@@ -183,6 +188,8 @@ $blockTSize: 18px;
 .block-title {
   padding: 70px 0;
   background-color: $blockBgColor;
+  @include shadow;
+  position: relative;
 }
 .block-t-t {
   padding: 0;
@@ -201,24 +208,109 @@ $blockTSize: 18px;
 }
 
 /* === Block Slide Steps === */
-.block-slide-steps {
-  padding: 70px 0;
+.block-slide-steps {  
   background-image: url(../images/blue-bg.jpg);
+}
+.slider-list-wrap {
+  margin: 0 30px;
+  padding: 70px 0;
+  overflow: hidden;
+}
+.slider-item {
+  background: url(../images/slide-line.png) no-repeat right;
+
+  &:nth-child(3n+3) {
+    background: none;
+  };
+}
+.make-slider-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+}
+.make-slider-item-text {
+  text-align: center;
+  padding: 0 15%;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: $mainWeight;
+  color: $contentColor;
+}
+.slick-slider {
+  margin: 0 30px;
+  padding: 70px 0;
+}
+.slick-slide {
+  outline-style: none;
+}
+.slick-prev, .slick-next {
+  background: url(../images/slide-left.png) no-repeat center;
+  width: 28px;
+  height: 82px;
+  margin-top: -41px;
+  -webkit-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .1s linear;
+
+  &:hover {
+    background: url(../images/slide-left-active.png) no-repeat center;
+  };
+  &:before {
+    content: '';
+  };
+}
+.slick-prev {
+  left: -28px;
+}
+.slick-next {
+  background: url(../images/slide-right.png) no-repeat center;
+  right: -28px;
+
+  &:hover {
+    background: url(../images/slide-right-active.png) no-repeat center;
+  };
 }
 
 /* === Enhance === */
+.block-enhance {
+  @include shadow;
+  position: relative;
+
+  .content-area {
+    overflow: hidden;
+  }
+}
 .enhance-item {
   width: 32.6667%;
   margin-right: 1%;
-  padding: 20px;
+  padding: 40px 50px 40px 40px;
   background-color: #53a0d2;
   float: left;
   margin-bottom: 1%;
-  height: 200px;
+  color: $contentColor;
+  text-align: center;
+  font-weight: $mainWeight;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 16px;
+
+  .ei-numb {
+    margin-right: 30px;
+  }
 
   &:nth-child(3n+3) {
     margin-right: 0;    
   };
+}
+.block-enchance-header {
+  padding: 70px 0;
 }
 .ei-1 {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#519ed2+0,66adcd+55,71b4c8+100 */
@@ -299,8 +391,141 @@ $blockTSize: 18px;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9aae71', endColorstr='#a6ca9f',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
 }
 
+.enchance-footer {
+    margin: 19px 0 30px 0;
+}
+.ef-left {
+  float: left;
+  width: 32.6667%;
+}
+.ef-right {
+  float: right;
+  width: 50%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  font-weight: $mainWeight;
+  color: $titleColor;
+
+  h3 {
+    font-weight: $titleWeight;
+    font-size: 45px;
+    color: $titleColor;
+    margin: 0 20px;
+  }
+}
+.ef-r-text {
+  margin: 35px 0;
+}
+.ef-arrow {
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.block-form-spot {
+  margin: 0 30px;
+}
+.form-row {
+  margin-bottom: 50px;
+}
+.form-input, .form-textarea {
+  border-top: transparent;
+  border-right: transparent;
+  border-left: transparent;
+  border-bottom: 2px solid $inputColor;
+  background-color: transparent;
+  color: $inputColorActive;
+  font-weight: $mainWeight;
+  padding: 6px 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Roboto", Helvetica, 'PT Sans', sans-serif;
+  outline-style: none;
+  @include trText;
+  width: 100%;
+
+  &::-webkit-input-placeholder {color: $inputColor;}
+  &::-moz-placeholder          {color: $inputColor;}/* Firefox 19+ */
+  &:-moz-placeholder           {color: $inputColor;}/* Firefox 18- */
+  &:-ms-input-placeholder      {color: $inputColor;}
+
+  &:hover, &:focus {
+    border-bottom: 2px solid $inputColorActive;
+  };
+}
+.left-inp {
+  float: left;
+  width: 40%;
+}
+.right-inp {
+  float: right;
+  width: 40%;
+}
+.form-sbm {
+  background-color: transparent;
+  border-color: $inputColor;
+  color: $inputColor;
+  font-size: 15px;
+  padding: 10px 40px;
+  font-weight: $mainWeight;
+  cursor: pointer;
+  outline-style: none;
+  @include trText;
+
+  &:hover {
+    background-color: #fff;
+    border-color: #fff;
+    color: #35ABFF;
+  };
+}
+
 /* === Form Callback ===*/
 .block-form-callback {
+  padding: 40px 0;
+  background-image: url(../images/form-bg.jpg);
+}
+
+/* === Phones Slider === */
+.phones-slider {
+  background-image: url(../images/app-dev-bg.jpg);
   padding: 70px 0;
-  background-image: url(../images/blue-bg.jpg);
+}
+
+/* === Contacts === */
+.contacts {
+  padding: 50px 0;
+  @include shadow;
+  position: relative;
+}
+.contacts-content {
+  text-align: center;
+  margin-top: 20px;
+}
+.contacts-item {
+  display: inline-block;
+  line-height: 27px;
+  padding: 10px 20px 0 20px;
+  font-weight: $titleWeight;
+  font-size: 18px;
+
+  img {
+    display: block;
+    float: left;
+    margin-right: 10px;
+  }
+}
+
+/* === Footer Social === */
+.footer-social {
+  background-image: url(../images/footer-social-bg.jpg);
+  padding: 30px 0;
 }
