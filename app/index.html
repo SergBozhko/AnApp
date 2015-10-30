@@ -16,10 +16,11 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
     <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css">    
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -35,6 +36,11 @@
     <header id="main-header" class="clearfix">
       <section class="content-area">
         <a href="" class="logo-img"><img src="images/anapp-logo.png" alt=""></a>
+        <a href="#" class="mobile-menu-btn">
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+          <div class="menu-line"></div>
+        </a>
         <nav id="main-nav">
           <ul class="nav-list">
             <li><a href="">lorem</a></li>
@@ -45,7 +51,19 @@
           </ul>
         </nav>
       </section>      
-    </header>    
+    </header>
+    <div class="mobile-overlay"></div>
+    <div class="mobile-nav-menu">
+       <nav>
+         <ul class="mobile-nav-list">
+           <li><a href="#">Работа</a></li>
+           <li><a href="#">Этапы</a></li>
+           <li><a href="#">О нас</a></li>
+           <li><a href="#">Кейсы</a></li>
+           <li><a href="#">Контакты</a></li>
+         </ul>
+       </nav>
+     </div> 
     <section class="block-wrapper app-dev">
       <section class="content-area">
         <h1 class="app-dev-title">App Development & Desing House</h1>
@@ -64,7 +82,63 @@
     </section>
     <section class="block-wrapper block-slide-steps">
       <section class="content-area">
-        <div class="make-slider">
+        <div class="make-slider slider-desktop">
+          <div class="slider-item">
+            <img src="images/key.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+          <div class="slider-item">
+            <img src="images/optim.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+          <div class="slider-item">
+            <img src="images/designers.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+          <div class="slider-item">
+            <img src="images/tlf.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+          <div class="slider-item">
+            <img src="images/supp.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+          <div class="slider-item">
+            <img src="images/traffic.png" class="make-slider-img" alt="">
+            <div class="make-slider-item-text">
+              Lorem ipsum dolor sit amet, 
+              consectetur adipisicing elit, sed do 
+              eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua
+            </div>
+          </div>
+        </div>
+        <div class="make-slider slider-mobile">
           <div class="slider-item">
             <img src="images/key.png" class="make-slider-img" alt="">
             <div class="make-slider-item-text">
@@ -132,33 +206,69 @@
           </div>
         </div>        
         <div class="enhance-spot clearfix">
-          <div class="enhance-item ei-1">
+          <div class="enhance-item ei-1 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0s">
             <img alt="" src="images/ei-numb-1.png" class="ei-numb">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </span>
           </div>
-          <div class="enhance-item ei-2">
+          <div class="enhance-item ei-2 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">
             <img alt="" src="images/ei-numb-2.png" class="ei-numb">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div class="enhance-item ei-3">
+          <div class="enhance-item ei-3 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="1s">
             <img alt="" src="images/ei-numb-3.png" class="ei-numb">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div class="enhance-item ei-4">
-            <img alt="" src="images/ei-numb-4.png" class="ei-numb">
+          <div class="enhance-item ei-4 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="1.5s">            
+            <img alt="" src="images/ei-numb-6.png" class="ei-numb">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div class="enhance-item ei-5">
+          <div class="enhance-item ei-5 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="2s">          
             <img alt="" src="images/ei-numb-5.png" class="ei-numb">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
-          <div class="enhance-item ei-6">
+          <div class="enhance-item ei-6 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="2.5s">
+            <img alt="" src="images/ei-numb-4.png" class="ei-numb">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="enhance-spot es-mobile clearfix">
+          <div class="enhance-item ei-1 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">
+            <img alt="" src="images/ei-numb-1.png" class="ei-numb">
+            <span>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </span>
+          </div>
+          <div class="enhance-item ei-2 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">
+            <img alt="" src="images/ei-numb-2.png" class="ei-numb">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="enhance-item ei-3 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">
+            <img alt="" src="images/ei-numb-3.png" class="ei-numb">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="enhance-item ei-4 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">            
             <img alt="" src="images/ei-numb-6.png" class="ei-numb">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="enhance-item ei-5 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">          
+            <img alt="" src="images/ei-numb-5.png" class="ei-numb">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+          <div class="enhance-item ei-6 wow fadeInLeft" data-wow-duration="0.4s" data-wow-delay="0.5s">
+            <img alt="" src="images/ei-numb-4.png" class="ei-numb">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
           </div>
@@ -166,11 +276,11 @@
         <div class="enchance-footer clearfix"> 
           <div class="ef-left">
             <div class="ef-arrow">
-              <img src="images/ef-arrow-1.png" alt="">
-              <img src="images/ef-arrow-2.png" alt="">
-              <img src="images/ef-arrow-3.png" alt="">
-              <img src="images/ef-arrow-4.png" alt="">
-            </div>
+              <img src="images/ef-arrow-1.png" class="wow fadeIn" data-wow-duration="0.5s" data-wow-delay="0.5s" alt="">
+              <img src="images/ef-arrow-2.png" class="wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1s" alt="">
+              <img src="images/ef-arrow-3.png" class="wow fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" alt="">
+              <img src="images/ef-arrow-4.png" class="wow fadeIn" data-wow-duration="0.5s" data-wow-delay="2s" alt="">
+            </div>            
           </div>
           <div class="ef-right">
             <div class="ef-r-text">
@@ -213,7 +323,144 @@
       </section>
     </section>
     <section class="block-wrapper phones-slider">
-      <section class="content-area"></section>
+      <section class="content-area">
+        <div class="phone-slider phone-slider-desktop">
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-slider phone-slider-mobile">
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+          <div class="phone-slider-item">
+            <div class="phone-slide-inner-wrap">
+              <div class="phone-slide-in">
+                <div class="phone-slider-tip">
+                  <a href="#" class="app-button phone-tip">Посмотреть кейс</a>
+                  <a href="#" class="app-button phone-tip">Прочитать отзыв</a>
+                </div>
+                <img src="images/phone-slide-1.png" alt="" class="phone-slide-content">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
     <section class="block-wrapper contacts">
       <section class="content-area">
@@ -226,7 +473,9 @@
       </section>
     </section>
     <section class="block-wrapper footer-social">
-      <section class="content-area"></section>
+      <section class="content-area">
+        <script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script><div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,facebook,twitter"></div>
+      </section>
     </section>
     
 
@@ -234,6 +483,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+    <script src="/bower_components/wow/dist/wow.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
