@@ -302,6 +302,7 @@ $inputColorActive: rgb(159, 215, 255);
   display: block;
   margin: 0 auto;
   max-width: 90%;
+  cursor: pointer;
 }
 .make-slider-item-text {
   text-align: center;
@@ -648,12 +649,30 @@ $inputColorActive: rgb(159, 215, 255);
   font-weight: $titleWeight;
   font-size: 18px;
 
+  a {
+    color: $titleColor;
+
+    @include trText;
+    &:hover {
+      
+    };
+  }
   img {
     display: block;
     float: left;
     margin-right: 10px;
+    height: 27px;
+    @include trText;  
   }
 }
+.contacts-item:hover a {
+  text-shadow: 0 2px 24px #000;
+  color: #fff;
+}
+.contacts-item:hover img {
+  opacity: 0.6;
+}
+
 .phone-slider {
   .slick-next {
     background-image: url(../images/phone-slide-right.png);
@@ -720,6 +739,16 @@ $inputColorActive: rgb(159, 215, 255);
   &:last-child {
     margin-right: 0 !important;
   };
+}
+
+.contacts-map-area {
+  display: none;
+  margin-top: 30px;
+
+  iframe {
+    width: 100%;
+    box-shadow: 0 0 2px 1px #ccc;
+  }
 }
 
 /* ===========================================================
@@ -852,6 +881,13 @@ only screen and (max-device-width: 736px) {
   }
   .es-mobile {
     display: block;
+  }
+
+  .contacts-content {
+    text-align: left;
+  }
+  .contacts-phone, .map-open img {
+    margin-right: 33px !important;
   }
 }
 @media only screen and (max-width: 400px),

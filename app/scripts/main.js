@@ -45,4 +45,23 @@ $(function() {
 	  slidesToShow: 1,
 	  slidesToScroll: 1
 	});
+
+	// Map toggle
+	var $mapBtn = $('.map-open'),
+		$mapArea = $('.contacts-map-area');
+
+	$mapBtn.click(function(e) {
+		e.preventDefault();
+
+		$mapArea.slideToggle('fast');
+	});
+
+	// Slider image effect
+	var $makeSlide = $('.make-slider-img');
+
+	$makeSlide.on('click', function() {
+		$(this).addClass('animated wobble');
+	}).mouseup(function() {
+		$makeSlide.removeClass('animated wobble');
+	});
 });
